@@ -23,19 +23,19 @@ define([
             .addClass('tab-pane')
             .append('<div id="recycle_bin_toolbar" class="row list_toolbar">\
             <div class="col-sm-8 no-padding">\
-              <div class="recycle-bin-instructions"><span style="color:#337ab7"><b>Recycle Bin</b></span></div>\
+              <div class="recycle-bin-instructions"><span style="color:#337ab7"><b>回收站</b></span></div>\
               <div class="recycle-bin-buttons" style="padding-top: 0px; display: none;">\
-                  <button title="还原" aria-label="还原" class=" btn btn-default btn-xs" id="recovery">还原</button>\
-                  <button title="彻底删除" aria-label="彻底删除" class="btn btn-default btn-xs btn-warning" id="delete-forver">彻底删除</button>\
+                  <button title="还原" aria-label="还原" class=" btn btn-default" id="recovery">还原</button>\
+                  <button title="彻底删除" aria-label="彻底删除" class="btn btn-default btn-warning" id="delete-forver">彻底删除</button>\
               </div>\
             </div>\
             <div class="col-sm-4 no-padding tree-buttons">\
               <div class="pull-right">\
                 <div class="btn-group">\
-                    <button id="drop_all_trash"  class="btn btn-default btn-xs btn-danger">清空回收站</button>\
+                    <button id="drop_all_trash"  class="btn btn-default btn-danger">清空回收站</button>\
                 </div>\
                 <div class="btn-group">\
-                    <button id="refresh_recycle_bin_list" title="刷新回收站列表" aria-label="刷新回收站列表" class="btn btn-default btn-xs"><i class="fa fa-refresh"></i></button>\
+                    <button id="refresh_recycle_bin_list" title="刷新回收站列表" aria-label="刷新回收站列表" class="btn btn-default"><i class="fa fa-refresh"></i></button>\
                 </div>\
               </div>\
             </div>\
@@ -43,11 +43,11 @@ define([
             .append('<div id="trash_list" class="list_container" >\
                 <div id="trash_list_header" class="row list_header">\
                   <div class="btn-group dropdown" id="trash-tree-selector">\
-                    <button title="全选/取消选中" aria-label="全选/取消选中" type="button" class="btn btn-default btn-xs" id="trash-button-select-all">\
+                    <button title="全选/取消选中" aria-label="全选/取消选中" type="button" class="btn btn-default" id="trash-button-select-all">\
                       <input type="checkbox" class="pull-left tree-selector" id="trash-select-all" style="margin-left: 7px;">\
                       <span id="trash-counter-select-all">0</span>\
                     </button>\
-                    <button title="选择..." class="btn btn-default btn-xs dropdown-toggle" type="button" id="trash-tree-selector-btn" data-toggle="dropdown" aria-expanded="true">\
+                    <button title="选择..." class="btn btn-default dropdown-toggle" type="button" id="trash-tree-selector-btn" data-toggle="dropdown" aria-expanded="true">\
                       <span class="caret"></span>\
                       <span class="sr-only">Toggle Dropdown</span>\
                     </button>\
@@ -58,7 +58,7 @@ define([
                     </ul>\
                   </div>\
                   <div id="delete-date" class="pull-right sort_button">\
-                      <span class="btn btn-xs btn-default sort-action" >\
+                      <span class="btn btn-default sort-action" >\
                           删除日期\
                           <i class="fa fa-arrow-down" id = "trash-sort-mark"></i>\
                       </span>\
@@ -71,7 +71,7 @@ define([
                 </div>\
             </div>')
             .appendTo('.tab-content');
-        $(".delete-button").before('<button title="移入回收站" aria-label="移入回收站" class="delete-button trash-button btn btn-default btn-xs btn-warning" style="display: none;margin-right: 5px"><i class="fa fa-recycle"></i></button>');
+        $(".delete-button").before('<button title="移入回收站" aria-label="移入回收站" class="delete-button trash-button btn btn-default btn-warning" style="display: none;margin-right: 5px"><i class="fa fa-recycle"></i></button>');
 
 
     };
@@ -236,7 +236,7 @@ define([
         var tab_text = '回收站';
         var tab_id = 'recycle_bin';
         var tab_link = $('<a></a>')
-            .text(tab_text)
+            .html('<span class="dqicon">&#xe783;</span> ' + tab_text)
             .attr('href', '#' + tab_id)
             .attr('data-toggle', 'tab')
             .on('click', function (evt) {

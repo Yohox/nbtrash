@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name="nbtrash",
-    version='0.1.0',
+    version='0.1.3',
     url="https://github.com/wixb50/nbtrash",
     author="wixb50",
     description="Add Recycle bin to your jupyter notebook.",
